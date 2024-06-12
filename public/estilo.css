@@ -1,0 +1,344 @@
+/* Puse eso para centrar el formulario y otras funciones que necesite */
+.row {
+  width: 100%;
+}
+/* desativar el desplasamiento de la pagina  con el mouse
+body {
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}sidebar-wrapper
+html {
+  height: 100%;
+}
+*/
+.content {
+  max-height: 450px; /* Limita la altura del contenido */
+  overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido excede la altura máxima */
+}
+/* Añade estos estilos a tu archivo CSS */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.home-content {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+
+.navegador-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+
+:root {
+  --main-bg-color: #009d63;
+  --main-text-color: #060707;
+  --second-text-color: #bbbec5;
+  --second-bg-color: #1abeff1a;
+}
+
+.primary-text {
+  color: var(--main-text-color);
+}
+
+.second-text {
+  color: var(--second-text-color);
+}
+
+.primary-bg {
+  background-color: var(--main-bg-color);
+}
+
+.secondary-bg {
+  background-color: var(--second-bg-color);
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+
+  overflow-x: hidden;
+  background-image: url('./img/fondo.png');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center; 
+}
+
+#sidebar-wrapper {
+  /* position: fixed; */
+ 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+
+}
+
+#page-content-wrapper {
+  
+  min-width: 100vw;
+  padding-left: 15rem;
+
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  
+  margin-left: 0;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 100px 30px;
+}
+.custom-list-button {
+  margin-left: -80px;
+}
+.custom-list-button1 {
+  margin-left: -105px;
+}
+.custom-list-button2{
+  margin-left: 20px;
+}
+.custom-list-button3 {
+  margin-left: -130px;
+}
+.custom-list-button4 {
+  margin-left: -130px;
+}
+.custom-list-button5 {
+  margin-left: -135px;
+}
+
+.list-group-item.active {
+  background-color: transparent;
+  color: var(--main-text-color);
+  font-weight: bold;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+      margin-left: -20px;
+  }
+
+  #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+      padding-left: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+      margin-left: -15rem;
+  }
+}
+
+.footer {
+  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+.mb-0{
+
+  color: black;
+}
+
+
+/* Estilos para el encabezado */
+#navbarSupportedContent {
+  margin: 0 auto;
+}
+
+#navbarSupportedContent .nav-item {
+  margin-right: 15px;
+}
+
+#navbarSupportedContent .nav-link {
+  padding: .5rem 1rem;
+  font-size: 16px;
+}
+
+.navbar-brand img {
+  max-width: 100px;
+}
+
+
+
+
+
+#izquierda1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#izquierda1 img {
+  max-width: 120px; /* Establece un ancho máximo para la imagen */
+}
+
+#izquierda1 p {
+  margin-top: 5px; /* Ajusta el margen superior del párrafo */
+}
+.profile-dropdown {
+  position: relative;
+  display: inline-block; /* Añadimos esto para que el menú desplegable se muestre correctamente */
+}
+
+.profile-dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 150px;
+  border-radius: 50px;
+  color: var(--black);
+  cursor: pointer;
+  border: 1px solid var(--secondary);
+  transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in, border 0.3s;
+}
+
+.profile-dropdown-btn:hover {
+  background-color: var(--secondary-light-2);
+  box-shadow: var(--shadow);
+}
+
+.profile-img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.profile-dropdown-list {
+  position: absolute;
+  top: 100%;
+  width: 220px;
+  right: 0;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: max-height 0.5s;
+  display: none; /* Ocultamos el menú desplegable por defecto */
+}
+
+.profile-dropdown-list.active {
+  display: block; /* Mostramos el menú desplegable cuando está activo */
+}
+
+.profile-dropdown-list-item {
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  transition: background-color 0.2s ease-in, padding-left 0.2s;
+}
+
+.profile-dropdown-list-item a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.profile-dropdown-list-item a i {
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: var(--secondary);
+  color: var(--white);
+  line-height: 2.3rem;
+  text-align: center;
+  margin-right: 1rem;
+  border-radius: 50%;
+  transition: margin-right 0.3s;
+}
+
+.profile-dropdown-list-item:hover {
+  padding-left: 1.5rem;
+  background-color: var(--secondary-light);
+}
+#my-breadcrumb {
+  /* Aplica estilos para alinear el breadcrumb hacia la derecha */
+  display: flex;
+  margin-right: 150px;
+  justify-content: flex-end;
+
+}
+
+#my-breadcrumb ol {
+  /* Ajusta los márgenes del breadcrumb */
+  margin: 0;
+  padding: 0;
+}
+
+#my-breadcrumb .breadcrumb-item {
+  /* Aplica estilos a los elementos del breadcrumb */
+  margin-left: 0px; /* Ajusta el espaciado entre elementos */
+}
+
+.small-cell {
+  padding: 0.2rem; /* Reduce el padding de las celdas */
+  font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+}
+
+.SetCellHeight {
+  height: 50px; /* Ajusta la altura según sea necesario */
+  overflow: hidden; /* Oculta el contenido que se desborde */
+  white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el contenido es muy largo */
+}
