@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-// Creamos el contexto para la variable de sesión
+// Creamos el contexto para la variable de sesións
 export const SessionContext = createContext(null);
 // Hook personalizado para acceder al contexto de la sesión
 export const useSession = () => useContext(SessionContext);
