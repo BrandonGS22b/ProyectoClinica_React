@@ -174,6 +174,9 @@ function FormUsuarios(props) {
   console.log("AB", thisUsuario.ubicacion);
   console.log("AC", thisUsuario.ubicacion.municipio);
   */
+
+
+  
   return (
     <div className="container mt-5">
         <form className="border p-5 rounded shadow bg-body">
