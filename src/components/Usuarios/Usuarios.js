@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 import { useSession } from "../Usuarios/Login";
 
 function Usuarios(props) {
-  const { usuarioActivo } = props;
+
   const [mostrarLista, setMostrarLista] = useState(true);
   const [usuarios, setUsuarios] = useState([]);
   const [usuario, setUsuario] = useState(null);
@@ -39,29 +39,13 @@ function Usuarios(props) {
       setMostrarLista(true);
       setUsuario({
         _id: "",
-        codigo: "",
         nombres: "",
-        apellidos: "",
-        direccion: "",
+        apellidos: "",  
         telefono: "",
         correo: "",
-        tipoDocumento: "",
         documento: "",
         rol: "",
-        estado: "",
-        fechaNacimiento: "",
-        tipoSangre: "",
-        clave: "",
-        ubicacion: {
-          idUbicacion: "",
-          departamento: "",
-          municipio: "",
-          codigoUbicacion: ""
-        },
-        especialidad: {
-          idEspecialidades: "",
-          especialidad: ""
-        }
+        
       });
     }
   };

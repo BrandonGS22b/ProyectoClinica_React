@@ -15,7 +15,7 @@ import { useSession } from "../Usuarios/Login";
 
 function Navegador({ children }) {
   const [ content, setContent ] = useState(<Home />);
-  const [ activeButton, setActiveButton ] = useState(null);
+
   const navigate = useNavigate();
   const [ usuarioActivo, setUsuarioActivo ] = useState(null);
   const { session, setSession } = useSession();
@@ -67,10 +67,9 @@ function Navegador({ children }) {
       }
     }
   }, [ session ]);
-
+//cuando se cierra session
   const handleButtonClick = (component, buttonName, path) => {
     setContent(component);
-    setActiveButton(buttonName);
     navigate(path); // Navegar a la ruta especificada
   };
 
@@ -172,7 +171,11 @@ function Navegador({ children }) {
           </button>
         </div>
       </div>
+
+
+      
       <div id="page-content-wrapper">
+         <>menu parte de arriba</>
         <div className="container-fluid px-3">
           <div className="row g-2 my-0">
             <div className="user-info-container p-4 bg-white shadow-sm d-flex justify-content-between align-items-center rounded flex-grow-1">
